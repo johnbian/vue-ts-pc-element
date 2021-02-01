@@ -9,7 +9,7 @@ This project was bootstrapped with [vue-cli](https://github.com/vuejs/vue-cli)
 ### 解决前进刷新后退不刷新问题
 利用`keep-alive`解决[多路由，前进刷新，后退不刷新](https://segmentfault.com/a/1190000012083511)
 
-### 手机适配方案
+### 适配方案
 适配上我选择了`viewport`的方案可参考
 [如何在Vue项目中使用vw实现移动端适配](https://www.w3cplus.com/mobile/vw-layout-in-vue.html)
 
@@ -17,7 +17,7 @@ This project was bootstrapped with [vue-cli](https://github.com/vuejs/vue-cli)
 
 ### ui组建
 项目引入的组件库是
-[vant](https://youzan.github.io/vant/#/zh-CN/quickstart)已经用 [ts-import-plugin](https://github.com/Brooooooklyn/ts-import-plugin)做了按需加载
+[element](https://element.eleme.cn/#/zh-CN/component)
 
 ### 数据请求
 这边对[axios](https://github.com/axios/axios)中的post以及get等方法进行了一些封装。以及拦截器做好了配置，只需加入一些特定的处理。常用的`loading`已经加入。我们项目中还会选择在拦截器中做统一报错处理。

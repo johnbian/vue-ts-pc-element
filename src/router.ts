@@ -4,9 +4,10 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       meta: {
         keepAlive: true,
@@ -16,7 +17,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "home" */ './views/Home.vue'),
     },
     {
-      path: '/about',
+      path: '/about/:aboutId',
       name: 'about',
       meta: {
         keepAlive: true,

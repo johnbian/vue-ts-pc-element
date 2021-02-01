@@ -13,7 +13,10 @@ export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
 
   private _goVuexTest(): void {
-    this.$router.push('/About');
+    this.$router.push({
+      name: 'about',
+      params: { aboutId: '123' },
+    });
   }
 }
 </script>

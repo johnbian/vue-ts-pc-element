@@ -1,81 +1,5 @@
 <template>
   <div class="home">
-    <div class="container" flexcontainer> 
-     <div class="block-item" w-375-246 aspectratio aspect-ratio="375/246"> 
-      <div aspectratio-content> 
-       <img src="//gw.alicdn.com/mt/TB1t7CZSXXXXXcYXVXXXXXXXXXX-375-246.png" alt="" width="100%" height="100%"> 
-      </div> 
-     </div> 
-     <div class="block-item" w-375-246 aspectratio aspect-ratio="375/246"> 
-      <div aspectratio-content> 
-       <img src="//gw.alicdn.com/mt/TB1LoOOSXXXXXbPaXXXXXXXXXXX-375-246.png" alt="" width="100%" height="100%"> 
-      </div> 
-     </div> 
-    </div> 
-    <div flexcontainer>
-     <div class="block-item" w-188-246 aspectratio aspect-ratio="188/246"> 
-      <div aspectratio-content> 
-       <img src="//gw.alicdn.com/mt/TB1Ey5WSXXXXXcJXVXXXXXXXXXX-188-246.png" alt="" width="100%" height="100%"> 
-      </div> 
-     </div> 
-     <div class="block-item" w-187-246 aspectratio aspect-ratio="187/246"> 
-      <div aspectratio-content> 
-       <img src="//gw.alicdn.com/mt/TB1FuvcSXXXXXaCXFXXXXXXXXXX-187-246.png" alt="" width="100%" height="100%"> 
-      </div> 
-     </div> 
-     <div class="block-item" w-188-246 aspectratio aspect-ratio="188/246"> 
-      <div aspectratio-content> 
-       <img src="//gw.alicdn.com/mt/TB1eDK5SXXXXXXgXVXXXXXXXXXX-188-246.png" alt="" width="100%" height="100%"> 
-      </div> 
-     </div> 
-     <div class="block-item" w-187-246 aspectratio aspect-ratio="187/246"> 
-      <div aspectratio-content> 
-       <img src="//gw.alicdn.com/mt/TB16RKLSXXXXXb5aXXXXXXXXXXX-187-246.png" alt="" width="100%" height="100%"> 
-      </div> 
-     </div> 
-    </div>
-    <div class="block block-5"> 
-			<div class="container"> 
-			<ul> 
-				<li flexcontainer> 
-				<div w-324-324 aspectratio aspect-ratio="324/324"> 
-					<div aspectratio-content> 
-					<img src="//gw.alicdn.com/imgextra/i1/642910327/TB26bQ_bb_0UKFjy1XaXXbKfXXa_!!642910327-0-beehive-scenes.jpg" alt="" width="100%" height="100%"> 
-					</div> 
-				</div>
-				<figcaption> 
-					<h2>本来生活 牛油果</h2> 
-					<div>
-					牛油果有“森林黄油”的美誉，是一种高蛋白、低脂肪的水果，也因此而倍受喜爱。本来生活选用优质进口牛油果，安全健康，营养价值非常高，其中富含植物纤维、不饱和脂肪酸等营养物质，非常适合妈妈宝宝食用。
-					</div> 
-				</figcaption> </li> 
-				<li flexcontainer> 
-				<div w-324-324 aspectratio aspect-ratio="324/324"> 
-					<div aspectratio-content> 
-					<img src="//gw.alicdn.com/imgextra/i1/642910327/TB26bQ_bb_0UKFjy1XaXXbKfXXa_!!642910327-0-beehive-scenes.jpg" alt="" width="100%" height="100%"> 
-					</div> 
-				</div> 
-				<figcaption> 
-					<h2>本来生活 牛油果</h2> 
-					<div>
-					牛油果有“森林黄油”的美誉，是一种高蛋白、低脂肪的水果，也因此而倍受喜爱。本来生活选用优质进口牛油果，安全健康，营养价值非常高，其中富含植物纤维、不饱和脂肪酸等营养物质，非常适合妈妈宝宝食用。
-					</div> 
-				</figcaption> </li> 
-				<li flexcontainer> 
-				<div w-324-324 aspectratio aspect-ratio="324/324"> 
-					<div aspectratio-content> 
-					<img src="//gw.alicdn.com/imgextra/i1/642910327/TB26bQ_bb_0UKFjy1XaXXbKfXXa_!!642910327-0-beehive-scenes.jpg" alt="" width="100%" height="100%"> 
-					</div> 
-				</div>
-				<figcaption> 
-					<h2>本来生活 牛油果</h2> 
-					<div>
-					牛油果有“森林黄油”的美誉，是一种高蛋白、低脂肪的水果，也因此而倍受喜爱。本来生活选用优质进口牛油果，安全健康，营养价值非常高，其中富含植物纤维、不饱和脂肪酸等营养物质，非常适合妈妈宝宝食用。
-					</div> 
-				</figcaption> </li> 
-			</ul> 
-			</div> 
-		</div>
     <img alt="Vue logo" src="../assets/logo.png">
     <Button @click="_add">+</Button>
       {{ num }}
@@ -109,11 +33,8 @@ export default class Home extends Vue {
     next();
   }
 
-  public async activated(): Promise<any> {
-    if (!this.$route.meta.isBack) {
-      await api.nameSet();
-    }
-    this.$route.meta.isBack = false;
+  public async created(): Promise<any> {
+    await api.nameSet();
   }
 
   private _add(): void {
