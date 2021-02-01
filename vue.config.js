@@ -17,13 +17,6 @@ module.exports = {
           options: {
             happyPackMode: true, // IMPORTANT! use happyPackMode mode to speed-up compilation and reduce errors reported to webpack
             transpileOnly: true,
-            getCustomTransformers: () => ({
-              before: [ tsImportPluginFactory({
-                libraryName: 'vant',
-                libraryDirectory: 'lib',
-                style: true
-              })]
-            }),
             compilerOptions: {
               module: 'es2015'
             }
